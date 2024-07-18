@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.10.35013.160
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceViewer", "ServiceViewer\ServiceViewer.csproj", "{DB992B86-E3AB-4B5C-8EBE-55EF0227CBA0}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceViewer.Desktop", "ServiceViewer.Desktop\ServiceViewer.Desktop.csproj", "{90199AAF-9CC0-455C-8BED-68A6FAECFAED}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{DB992B86-E3AB-4B5C-8EBE-55EF0227CBA0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DB992B86-E3AB-4B5C-8EBE-55EF0227CBA0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DB992B86-E3AB-4B5C-8EBE-55EF0227CBA0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DB992B86-E3AB-4B5C-8EBE-55EF0227CBA0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{90199AAF-9CC0-455C-8BED-68A6FAECFAED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{90199AAF-9CC0-455C-8BED-68A6FAECFAED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{90199AAF-9CC0-455C-8BED-68A6FAECFAED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{90199AAF-9CC0-455C-8BED-68A6FAECFAED}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6694321F-4E9A-480B-99FB-D1CDFEC3CFD4}
+	EndGlobalSection
+EndGlobal
