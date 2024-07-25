@@ -1,0 +1,41 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches:
+      - '*'
+  pull_request:
+    branches:
+      - '*'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - name: Setup .NET
+      uses: actions/setup-dotnet@v4
+      with:
+        dotnet-version: 8.0.x
+    - name: Restore dependencies
+      run: dotnet restore src/ServiceViewer.sln
+    - name: Build Solution
+      run: dotnet build src/ServiceViewer.sln --no-restore
+    - name: Publish App win-x64
+      run: dotnet publish -c Release -r win-x64 ./src/ServiceViewer.Desktop/ServiceViewer.Desktop.csproj --output publish-win-x64
+    - name: Publish App linux-x64
+      run: dotnet publish -c Release -r linux-x64 ./src/ServiceViewer.Desktop/ServiceViewer.Desktop.csproj --output publish-linux-x64
+    - name: Upload Artifact win-x64
+      uses: actions/upload-artifact@v4
+      with:
+        name: ServiceViewer-win-x64
+        path: publish-win-x64
+    - name: Upload Artifact linux-x64
+      uses: actions/upload-artifact@v4
+      with:
+        name: ServiceViewer-linux-x64
+        path: publish-linux-x64
